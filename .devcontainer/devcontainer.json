@@ -1,0 +1,8 @@
+{
+	"name": "node",
+	"dockerComposeFile": "./docker-compose.yml"
+	// "features": {},
+	// "forwardPorts": [],
+	// "postCreateCommand": "npm install",
+	// "customizations": {},
+}
