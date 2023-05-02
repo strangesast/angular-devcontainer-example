@@ -4,7 +4,9 @@
   "service": "app",
   "workspaceFolder": "/workspace",
   // "features": {},
-  // "forwardPorts": [],
+  "forwardPorts": [
+    4200
+  ],
   "postCreateCommand": "npm install"
   // "customizations": {},
 }
