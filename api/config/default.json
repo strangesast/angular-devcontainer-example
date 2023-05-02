@@ -1,0 +1,10 @@
+{
+  "port": 3000,
+  "db": {
+    "host": "127.0.0.1",
+    "database": "master",
+    "port": 1433,
+    "user": "sa",
+    "password": "Password--"
+  }
+}

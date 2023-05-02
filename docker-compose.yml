@@ -3,10 +3,13 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
-    volumes:
-      - ..:/workspace:cached
-    command: /bin/sh -c "while sleep 1000; do :; done"
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8080:80"
+  api:
+    build:
+      context: .
+      dockerfile: docker/api/Dockerfile
   db:
     image: "mcr.microsoft.com/mssql/server:2022-latest"
     environment:
