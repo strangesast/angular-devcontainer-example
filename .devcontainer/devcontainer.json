@@ -1,6 +1,8 @@
 {
 	"name": "node",
-	"dockerComposeFile": "./docker-compose.yml"
+	"dockerComposeFile": "./docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace"
 	// "features": {},
 	// "forwardPorts": [],
 	// "postCreateCommand": "npm install",
