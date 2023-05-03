@@ -33,6 +33,16 @@ app.get('/api/', async (req, res, next) => {
   }
 });
 
+app.get('/api/tables', async (req, res, next) => {
+  try {
+    const results = await knex.raw(`select * from INFORMATION_SCHEMA.TABLES`);
+    res.json({ results });
+  } catch (err) {
+    next(err);
+  }
+});
+
+
 app.use(
   (
     err: Error,
