@@ -11,6 +11,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "vscodevim.vim",
         "dbaeumer.vscode-eslint",
         "GitHub.codespaces",
         "GitHub.github-vscode-theme",
