@@ -3,7 +3,10 @@
   "dockerComposeFile": "./docker-compose.yml",
   "service": "app",
   "workspaceFolder": "/workspace",
-  // "features": {},
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+    }
+  },
   "forwardPorts": [4200],
   "postCreateCommand": "npm install && cd api/ && npm install"
   // "customizations": {},

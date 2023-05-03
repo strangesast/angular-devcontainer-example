@@ -23,10 +23,14 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/api/', async (req, res) => {
-  const results = await knex.raw(`select @@servername as servername`);
-  const { servername } = results[0];
-  res.json({ servername });
+app.get('/api/', async (req, res, next) => {
+  try {
+    const results = await knex.raw(`select @@servername as servername`);
+    const { servername } = results[0];
+    res.json({ servername });
+  } catch (err) {
+    next(err);
+  }
 });
 
 app.use(
@@ -37,7 +41,7 @@ app.use(
     _: express.NextFunction // eslint-disable-line
   ) => {
     console.error(err.stack);
-    res.status(500).send('Something broke!');
+    res.status(500).send(err.stack);
   }
 );
 
