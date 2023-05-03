@@ -4,10 +4,19 @@
   "service": "app",
   "workspaceFolder": "/workspace",
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {
-    }
+    "ghcr.io/devcontainers/features/docker-in-docker:2": "latest"
   },
   "forwardPorts": [4200],
-  "postCreateCommand": "npm install && cd api/ && npm install"
-  // "customizations": {},
+  "postCreateCommand": "npm install && cd api/ && npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "GitHub.codespaces",
+        "GitHub.github-vscode-theme",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+
+  }
 }
